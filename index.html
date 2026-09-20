@@ -323,8 +323,8 @@
             msgContainer.scrollTop = msgContainer.scrollHeight;
 
             try {
-                // Future Python backend connection point
-               const response = await fetch('[https://strata-bot-api.onrender.com/api/chat](https://strata-bot-api.onrender.com/api/chat)', {
+                // Connected to Python Backend
+                const response = await fetch('https://strata-bot-api.onrender.com/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ message: userText })
@@ -343,7 +343,7 @@
                     document.getElementById('loa-modal').classList.remove('hidden');
                 }
             } catch (error) {
-                // Graceful fallback while the backend is being built
+                // Graceful fallback
                 setTimeout(() => {
                     msgContainer.innerHTML += `
                         <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm max-w-[85%] text-slate-700">
