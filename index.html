@@ -241,7 +241,13 @@
 
             <div id="chat-messages" role="log" aria-live="polite" class="p-4 h-80 max-h-[60vh] overflow-y-auto space-y-3 bg-neutralCanvas text-sm sm:text-xs">
                 <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm max-w-[85%] text-slate-700">
-                    Hello! Welcome to Strata Utilities. How can I assist with your commercial energy meters today?
+                    Hello, I'm Strata's AI assistant. I can explain how our bill audits, solar export aggregation and Data-Only LOA work. What would you like to know?
+                </div>
+                <!-- Suggested questions: tap one to ask it. Removed after the first message. -->
+                <div id="chat-suggestions" class="flex flex-wrap gap-2">
+                    <button type="button" onclick="askSuggestion(this)" class="bg-white hover:bg-emerald-50 text-slate-600 hover:text-emerald-800 border border-slate-200 hover:border-emerald-200 px-3 py-1.5 rounded-full transition text-left">What does an audit involve?</button>
+                    <button type="button" onclick="askSuggestion(this)" class="bg-white hover:bg-emerald-50 text-slate-600 hover:text-emerald-800 border border-slate-200 hover:border-emerald-200 px-3 py-1.5 rounded-full transition text-left">Could you switch my contract?</button>
+                    <button type="button" onclick="askSuggestion(this)" class="bg-white hover:bg-emerald-50 text-slate-600 hover:text-emerald-800 border border-slate-200 hover:border-emerald-200 px-3 py-1.5 rounded-full transition text-left">How much does it cost?</button>
                 </div>
             </div>
 
@@ -251,7 +257,7 @@
                 <button type="button" id="chat-send" onclick="handleSend()" class="bg-steelSlate text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-slate-800 transition disabled:opacity-50 disabled:cursor-wait">Send</button>
             </div>
             <p class="px-3 pb-2 bg-white text-[10px] text-slate-400 leading-snug">
-                AI assistant. Please don't share personal or sensitive details. <a href="privacy.html" class="underline hover:text-slate-600">Privacy</a>
+                AI assistant. Chats are kept for a short time to improve our answers, so please don't share personal or sensitive details. <a href="privacy.html" class="underline hover:text-slate-600">Privacy</a>
             </p>
         </div>
     </div>
@@ -437,6 +443,9 @@
         // the transcript and sends it with every message. Forgotten when the tab closes.
         const MAX_TURNS = 10; // must match MAX_TURNS in main.py
         let chatHistory = []; // [{ role: "user" | "assistant", content: "..." }]
+        // Random ID for this visit, so the server logs can group one conversation
+        // together. It isn't stored in the browser or linked to the visitor.
+        const chatSessionId = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Math.random()).slice(2);
 
         // Messages are added with textContent (never innerHTML) so anything a visitor
         // types is shown as plain text and can't run as code on the page.
@@ -460,6 +469,11 @@
 
         let isSending = false;
 
+        function askSuggestion(button) {
+            document.getElementById('chat-input').value = button.textContent;
+            handleSend();
+        }
+
         async function handleSend() {
             // One message at a time, so replies can't arrive out of order
             if (isSending) return;
@@ -471,6 +485,10 @@
             inputField.value = '';
             const msgContainer = document.getElementById('chat-messages');
             const sendButton = document.getElementById('chat-send');
+
+            // Suggested questions are only for getting started
+            const suggestions = document.getElementById('chat-suggestions');
+            if (suggestions) suggestions.remove();
 
             // Show User Message
             addUserMessage(userText);
@@ -491,7 +509,7 @@
                 const response = await fetch(`${API_BASE}/api/chat`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: userText, history: chatHistory })
+                    body: JSON.stringify({ message: userText, history: chatHistory, session_id: chatSessionId })
                 });
 
                 if (!response.ok) throw new Error("Backend offline");
