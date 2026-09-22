@@ -1,544 +1,349 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strata Utilities | Independent Energy Auditing & Asset Aggregation</title>
-    <meta name="description" content="Independent UK energy auditing on a flat monthly retainer. We audit half-hourly meter data, recover supplier overcharges and aggregate solar export PPA yields. Data-Only LOA Guarantee.">
-    <link rel="canonical" href="https://stratautilities.co.uk/">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <meta name="theme-color" content="#334155">
-
-    <!-- How the page looks when shared on LinkedIn, WhatsApp, email etc. -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Strata Utilities">
-    <meta property="og:title" content="Strata Utilities | Independent Energy Auditing & Asset Aggregation">
-    <meta property="og:description" content="Flat-retainer energy auditing for UK business. Half-hourly meter audits, supplier overcharge recovery and solar export PPA aggregation.">
-    <meta property="og:url" content="https://stratautilities.co.uk/">
-    <meta property="og:locale" content="en_GB">
-    <meta name="twitter:card" content="summary">
-
-    <!-- Helps Google show the business name correctly in search results -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Strata Utilities Ltd",
-        "url": "https://stratautilities.co.uk/",
-        "areaServed": "GB",
-        "description": "Independent energy auditing, half-hourly meter data analysis and solar export PPA aggregation for UK businesses."
-    }
-    </script>
-
-    <!-- Built by Tailwind from the classes in this page: after changing any classes,
-         run `npm run build` in the tailwind-build folder next to this one -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, .font-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
-    </style>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="6cf53810-67fc-4087-b2c0-9109fc7898da"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strata Utilities | Independent energy auditing &amp; solar export aggregation for UK business</title>
+<meta name="description" content="We check your half-hourly meter data and every line of your electricity bill, recover overcharges and make your solar export earn more. One flat monthly fee, paid by you, never by a supplier.">
+<meta property="og:title" content="Strata Utilities | Independent energy auditing for UK business">
+<meta property="og:description" content="Flat-fee bill auditing, overcharge recovery and solar export aggregation. Paid by you, not by suppliers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stratautilities.co.uk/">
+<meta property="og:locale" content="en_GB">
+<meta name="theme-color" content="#1E5C45">
+<link rel="canonical" href="https://stratautilities.co.uk/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Strata Utilities Ltd",
+    "url": "https://stratautilities.co.uk/",
+    "email": "john@stratautilities.co.uk",
+    "areaServed": "GB",
+    "description": "Independent, flat-fee energy auditing, overcharge recovery and solar export aggregation for UK businesses."
+}
+</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="6cf53810-67fc-4087-b2c0-9109fc7898da"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-neutralCanvas text-steelSlate antialiased selection:bg-precisionEmerald selection:text-white relative">
+<body>
 
-    <!-- Header / Navigation -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center space-x-3" aria-label="Strata Utilities home">
-                <!-- Variation 2.1 Logo SVG -->
-                <svg viewBox="0 0 540 100" class="h-8 sm:h-10 w-auto" aria-hidden="true">
-                    <defs>
-                        <linearGradient id="navEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#34D399" />
-                            <stop offset="100%" stop-color="#059669" />
-                        </linearGradient>
-                    </defs>
-                    <g transform="translate(18, 14)">
-                        <path d="M 68 14 L 38 14 C 22 14 10 26 10 42 C 10 46 11 50 13 54 L 26 46 C 25 45 24 43 24 42 C 24 34 30 28 38 28 L 68 28 Z" fill="url(#navEmerald)" />
-                        <path d="M 12 74 L 42 74 C 58 74 70 62 70 46 C 70 42 69 38 67 34 L 54 42 C 55 43 56 45 56 46 C 56 54 50 60 42 60 L 12 60 Z" fill="#334155" />
-                        <circle cx="40" cy="44" r="6" fill="#F59E0B" />
-                    </g>
-                    <text x="125" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="32" fill="#334155" letter-spacing="4">STRATA</text>
-                    <text x="125" y="74" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="14" fill="#059669" letter-spacing="6">UTILITIES</text>
-                    <line x1="295" y1="26" x2="295" y2="76" stroke="#CBD5E1" stroke-width="1.5"/>
-                    <text x="310" y="47" font-family="'Inter', sans-serif" font-weight="700" font-size="10" fill="#64748B" letter-spacing="1">ENERGY INTELLIGENCE &amp;</text>
-                    <text x="310" y="63" font-family="'Inter', sans-serif" font-weight="700" font-size="10" fill="#64748B" letter-spacing="1">ASSET AGGREGATION</text>
-                </svg>
-            </a>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600" aria-label="Main">
-                <a href="#calculator" class="hover:text-precisionEmerald transition">Yield Calculator</a>
-                <a href="#sectors" class="hover:text-precisionEmerald transition">UK Sectors</a>
-            </nav>
-            <!-- Hidden on phones: it doesn't fit beside the logo, and the same button is right below in the hero -->
-            <div class="hidden sm:block">
-                <a href="#calculator" class="bg-precisionEmerald hover:bg-emerald-600 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition shadow-sm">
-                    Estimate Audit Recovery
-                </a>
-            </div>
-        </div>
-    </header>
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Strata Utilities home">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1E5C45" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 8h20"/><path d="M4 14h20"/><path d="M4 20h20"/><path d="M18 4l4 4-4 4"/></svg>
+      Strata Utilities
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu" onclick="var n=document.getElementById('nav');var o=n.classList.toggle('is-open');this.setAttribute('aria-expanded',o);">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+    </button>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#audit">Bill audit</a>
+      <a href="#export">Solar export</a>
+      <a href="#sectors">Sectors</a>
+      <a href="#about">About</a>
+      <a class="btn btn--primary" href="#check">Send us one bill</a>
+    </nav>
+  </div>
+</header>
 
-    <main>
-    <!-- Hero Section -->
-    <section class="bg-neutralCanvas py-20 border-b border-slate-200 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div class="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-200 px-4 py-1.5 rounded-full text-xs font-semibold text-emerald-800 mb-6">
-                <span>100% Flat Retainer</span>
-                <span>•</span>
-                <span>Zero Hidden Broker Commissions</span>
-                <span>•</span>
-                <span>Data-Only LOA Guarantee</span>
-            </div>
-            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-steelSlate mb-6 max-w-4xl mx-auto leading-tight">
-                Independent Energy Auditing & Asset Aggregation for UK Business
-            </h1>
-            <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-                We audit Half-Hourly (HH) meter data, recover line-item supplier overcharges, and aggregate solar export PPA yields across UK estates, property portfolios, and manufacturing facilities.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#calculator" class="bg-precisionEmerald hover:bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-base transition shadow-md shadow-emerald-600/20">
-                    Estimate Savings & Yield Uplift
-                </a>
-                <button type="button" onclick="openLoaModal(this)" class="bg-white hover:bg-slate-50 text-steelSlate font-semibold px-8 py-4 rounded-xl text-base border border-slate-300 transition shadow-sm">
-                    Request a Data-Only LOA
-                </button>
-            </div>
+<main id="top">
 
-            <!-- Trust Grid -->
-            <div class="mt-16 pt-8 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-xs text-slate-500 font-medium">
-                <div class="bg-white p-3 rounded-lg border border-slate-200/60 shadow-sm">
-                    ✓ Direct UK DNO Meter Connections
-                </div>
-                <div class="bg-white p-3 rounded-lg border border-slate-200/60 shadow-sm">
-                    ✓ 30% Historical Recovery Success Fee
-                </div>
-                <div class="bg-white p-3 rounded-lg border border-slate-200/60 shadow-sm">
-                    ✓ Non-Commodity Charge Line Auditing
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Calculator -->
-    <section id="calculator" class="py-16 bg-white border-y border-slate-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold text-steelSlate">Interactive Audit & Yield Estimator</h2>
-                <p class="text-slate-600 mt-2">Adjust the parameters to project annual overcharge recovery and wholesale PPA yield uplift.</p>
-            </div>
-
-            <div class="bg-neutralCanvas border border-slate-200 rounded-2xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 shadow-sm">
-                <!-- Sliders -->
-                <div class="lg:col-span-7 space-y-6">
-                    <div>
-                        <div class="flex justify-between font-semibold text-sm mb-2">
-                            <label for="spend-slider" class="text-steelSlate">Monthly Commercial Energy Spend</label>
-                            <span class="text-precisionEmerald font-bold" id="spend-val">£10,000 / mo</span>
-                        </div>
-                        <input type="range" id="spend-slider" min="2000" max="50000" step="1000" value="10000" class="w-full accent-precisionEmerald cursor-pointer">
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between font-semibold text-sm mb-2">
-                            <label for="solar-slider" class="text-steelSlate">Annual Solar PV Export (kWh)</label>
-                            <span class="text-solarAmber font-bold" id="solar-val">100,000 kWh</span>
-                        </div>
-                        <input type="range" id="solar-slider" min="0" max="500000" step="10000" value="100000" class="w-full accent-solarAmber cursor-pointer">
-                    </div>
-
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 text-xs text-slate-500 leading-relaxed">
-                        *Estimates based on average UK mid-market historical billing error rates (~1.5% net recovery on non-commodity charges) and aggregated wholesale PPA export tariffs (+6.5p/kWh uplift over standard SEG rates).
-                    </div>
-                </div>
-
-                <!-- Output Box -->
-                <div class="lg:col-span-5 bg-steelSlate text-white rounded-xl p-6 flex flex-col justify-between shadow-md">
-                    <div>
-                        <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Estimated Annual Value Unlocked</span>
-                        <div class="text-3xl font-bold text-precisionEmerald mt-1 mb-6" id="total-value" aria-live="polite">£8,300 / yr</div>
-
-                        <div class="space-y-3 text-sm border-t border-slate-700 pt-4">
-                            <div class="flex justify-between text-slate-300">
-                                <span>Est. Line Audit Recovery:</span>
-                                <span class="font-semibold text-white" id="audit-rec">£1,800</span>
-                            </div>
-                            <div class="flex justify-between text-slate-300">
-                                <span>PPA Export Yield Uplift:</span>
-                                <span class="font-semibold text-white" id="ppa-rec">£6,500</span>
-                            </div>
-                            <div class="flex justify-between text-slate-300 pt-2 border-t border-slate-700/60">
-                                <span>Recommended Retainer:</span>
-                                <span class="font-semibold text-precisionEmerald" id="tier-rec">Premier (£250/mo)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type="button" onclick="openLoaModal(this)" class="w-full mt-6 bg-precisionEmerald hover:bg-emerald-600 text-white font-bold py-3 rounded-lg text-sm transition">
-                        Lock In This Yield Assessment
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- UK Sector Solutions -->
-    <section id="sectors" class="py-16 bg-neutralCanvas">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-steelSlate">Tailored UK Sector Solutions</h2>
-                <p class="text-slate-600 mt-2">Specialised half-hourly data management built for your operational profile.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 bg-emerald-50 text-precisionEmerald rounded-xl flex items-center justify-center font-bold text-xl mb-6">🌾</div>
-                        <h3 class="text-xl font-bold text-steelSlate mb-3">Agriculture & Rural Estates</h3>
-                        <p class="text-slate-600 text-sm mb-4">Unlocking wholesale PPA tariffs above standard Smart Export Guarantee (SEG) rates, alongside automated leak detection for borehole pumps.</p>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 bg-amber-50 text-solarAmber rounded-xl flex items-center justify-center font-bold text-xl mb-6">🏢</div>
-                        <h3 class="text-xl font-bold text-steelSlate mb-3">Commercial Property</h3>
-                        <p class="text-slate-600 text-sm mb-4">Automated tenant sub-meter recharge sheets, communal area cost allocations, and landlord void period protection.</p>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 bg-slate-100 text-steelSlate rounded-xl flex items-center justify-center font-bold text-xl mb-6">🏭</div>
-                        <h3 class="text-xl font-bold text-steelSlate mb-3">Manufacturing & Industry</h3>
-                        <p class="text-slate-600 text-sm mb-4">DUoS, TNUoS & CCL exemption line-item audits, kVA capacity charge optimisation, and retrospective 12-month error recovery.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    </main>
-
-    <!-- Floating Chat Widget -->
-    <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
-        <button type="button" id="chat-toggle" onclick="toggleChat()" aria-label="Open chat with the Strata Audit Assistant" aria-controls="chat-window" aria-expanded="false" class="bg-precisionEmerald hover:bg-emerald-600 text-white rounded-full p-4 shadow-xl flex items-center justify-center transition-all transform hover:scale-105">
-            <svg class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-            </svg>
-        </button>
-
-        <div id="chat-window" role="dialog" aria-label="Strata Audit Assistant chat" class="hidden absolute bottom-16 right-0 w-[calc(100vw-3rem)] max-w-sm sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col">
-            <div class="bg-steelSlate text-white p-4 flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div class="w-3 h-3 bg-precisionEmerald rounded-full animate-pulse"></div>
-                    <div>
-                        <h4 class="font-bold text-sm">Strata Audit Assistant</h4>
-                        <p class="text-xs text-slate-300">Energy Intelligence &amp; Auditing</p>
-                    </div>
-                </div>
-                <button type="button" onclick="toggleChat()" aria-label="Close chat" class="text-slate-400 hover:text-white font-bold text-sm p-1">✕</button>
-            </div>
-
-            <div id="chat-messages" role="log" aria-live="polite" class="p-4 h-80 max-h-[60vh] overflow-y-auto space-y-3 bg-neutralCanvas text-sm sm:text-xs">
-                <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm max-w-[85%] text-slate-700">
-                    Hello, I'm Strata's AI assistant. I can explain how our bill audits, solar export aggregation and Data-Only LOA work. What would you like to know?
-                </div>
-                <!-- Suggested questions: tap one to ask it. Removed after the first message. -->
-                <div id="chat-suggestions" class="flex flex-wrap gap-2">
-                    <button type="button" onclick="askSuggestion(this)" class="bg-white hover:bg-emerald-50 text-slate-600 hover:text-emerald-800 border border-slate-200 hover:border-emerald-200 px-3 py-1.5 rounded-full transition text-left">What does an audit involve?</button>
-                    <button type="button" onclick="askSuggestion(this)" class="bg-white hover:bg-emerald-50 text-slate-600 hover:text-emerald-800 border border-slate-200 hover:border-emerald-200 px-3 py-1.5 rounded-full transition text-left">Could you switch my contract?</button>
-                    <button type="button" onclick="askSuggestion(this)" class="bg-white hover:bg-emerald-50 text-slate-600 hover:text-emerald-800 border border-slate-200 hover:border-emerald-200 px-3 py-1.5 rounded-full transition text-left">How much does it cost?</button>
-                </div>
-            </div>
-
-            <div class="p-3 bg-white border-t border-slate-200 flex gap-2">
-                <!-- text-base on phones stops iPhones zooming in when the box is tapped -->
-                <input type="text" id="chat-input" aria-label="Your message" placeholder="Type a message..." maxlength="1000" autocomplete="off" class="flex-1 min-w-0 px-3 py-2 border border-slate-300 rounded-lg text-base sm:text-sm outline-none focus:border-precisionEmerald" onkeydown="handleKeyPress(event)">
-                <button type="button" id="chat-send" onclick="handleSend()" class="bg-steelSlate text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-slate-800 transition disabled:opacity-50 disabled:cursor-wait">Send</button>
-            </div>
-            <p class="px-3 pb-2 bg-white text-[10px] text-slate-400 leading-snug">
-                AI assistant. Chats are kept for a short time to improve our answers, so please don't share personal or sensitive details. <a href="privacy.html" class="underline hover:text-slate-600">Privacy</a>
-            </p>
-        </div>
+<!-- HERO -->
+<section class="wrap hero">
+  <div class="hero__copy">
+    <p class="eyebrow">Independent energy auditing for UK business</p>
+    <h1>You're probably overpaying for electricity. We find out, and get it back.</h1>
+    <p class="lede">We check your half-hourly meter data and every line of your bill, recover what you've been overcharged, and make your solar export earn what it should. One flat monthly fee. Paid by you, never by a supplier.</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#check">Send us one bill — free check</a>
+      <a class="btn btn--ghost" href="#how">See how it works</a>
     </div>
-
-    <!-- Data-Only LOA Modal -->
-    <div id="loa-modal" onclick="if (event.target === this) closeLoaModal()" class="fixed inset-0 bg-steelSlate/70 backdrop-blur-sm z-[60] flex items-center justify-center hidden p-4">
-        <div role="dialog" aria-modal="true" aria-labelledby="loa-title" class="bg-white rounded-2xl max-w-md w-full max-h-full overflow-y-auto p-6 sm:p-8 shadow-2xl relative border border-slate-200">
-            <button type="button" onclick="closeLoaModal()" aria-label="Close" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold text-lg p-1">✕</button>
-            <h3 id="loa-title" class="text-xl font-bold text-steelSlate mb-2">Request Data-Only Audit LOA</h3>
-            <p class="text-xs text-slate-600 mb-4">Enter your details to receive a Level 1 Letter of Authority link via email. Zero obligation to proceed.</p>
-            <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-xs text-emerald-900 mb-6 leading-relaxed">
-                <strong>The Data-Only Guarantee:</strong> Our LOA strictly grants permission to request historical meter data from your DNO. It contains ZERO authority to alter, extend, or switch supply contracts.
-            </div>
-            <!-- Sends the details to the Render server, which emails them to John -->
-            <form id="loa-form" onsubmit="submitLoaForm(event)" class="space-y-4">
-                <!-- Honeypot: hidden from people, but spam bots fill it in and get ignored -->
-                <div class="hidden" aria-hidden="true">
-                    <label for="loa-website">Leave this empty</label>
-                    <input type="text" id="loa-website" name="website" tabindex="-1" autocomplete="off">
-                </div>
-                <div>
-                    <label for="loa-company" class="block text-xs font-semibold text-slate-700 mb-1">Company Name</label>
-                    <input type="text" id="loa-company" name="company" autocomplete="organization" required class="w-full px-3 py-2 border border-slate-300 rounded-lg text-base sm:text-sm focus:ring-2 focus:ring-precisionEmerald outline-none">
-                </div>
-                <div>
-                    <label for="loa-email" class="block text-xs font-semibold text-slate-700 mb-1">Work Email</label>
-                    <input type="email" id="loa-email" name="email" autocomplete="email" required class="w-full px-3 py-2 border border-slate-300 rounded-lg text-base sm:text-sm focus:ring-2 focus:ring-precisionEmerald outline-none">
-                </div>
-                <p id="loa-error" role="alert" class="hidden text-xs text-red-700 bg-red-50 border border-red-200 rounded-lg p-3"></p>
-                <button type="submit" id="loa-submit" class="w-full bg-precisionEmerald hover:bg-emerald-600 text-white font-bold py-3 rounded-lg text-sm transition shadow-sm disabled:opacity-50 disabled:cursor-wait">
-                    Request Data-Only LOA Link
-                </button>
-                <p class="text-[11px] text-slate-500 leading-relaxed">
-                    We'll only use your details to send your LOA and follow up on this request. See our <a href="privacy.html" class="underline hover:text-steelSlate">privacy policy</a>.
-                </p>
-            </form>
-
-            <!-- Shown in place of the form once the request has gone through -->
-            <div id="loa-success" class="hidden text-center py-4" role="status">
-                <div class="w-12 h-12 mx-auto mb-4 bg-emerald-50 text-precisionEmerald rounded-full flex items-center justify-center text-2xl font-bold">✓</div>
-                <p class="font-bold text-steelSlate mb-1">Request received</p>
-                <p class="text-sm text-slate-600 mb-6">Thank you. We'll email your Data-Only LOA link to you shortly.</p>
-                <button type="button" onclick="closeLoaModal()" class="bg-steelSlate hover:bg-slate-800 text-white font-bold px-6 py-2.5 rounded-lg text-sm transition">Close</button>
-            </div>
-        </div>
+  </div>
+  <aside class="card hero__proof" aria-label="What makes us different">
+    <p class="eyebrow eyebrow--muted">What makes us different</p>
+    <div class="check-row">
+      <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E5C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+      <p><strong>We're paid by you, not by suppliers.</strong> No commission, no kickbacks, so there's no reason for us to push you into a contract.</p>
     </div>
+    <div class="check-row">
+      <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E5C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+      <p><strong>We can't switch your supplier.</strong> Our letter of authority is data-only. We read; we don't sign.</p>
+    </div>
+    <div class="check-row">
+      <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E5C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+      <p><strong>One flat monthly fee.</strong> You know the cost before we start. If there's nothing to find, we'll tell you.</p>
+    </div>
+  </aside>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-steelSlate text-slate-400 py-8 border-t border-slate-700 text-xs text-center space-y-2">
-        <p>© 2026 Strata Utilities</p>
-        <p><a href="privacy.html" class="underline hover:text-white">Privacy policy</a></p>
-    </footer>
+<!-- CONTRAST -->
+<section class="wrap contrast" aria-labelledby="contrast-h">
+  <div class="contrast__head">
+    <h2 id="contrast-h">Not a broker. Here's the difference.</h2>
+    <p class="lede">Most energy brokers are paid a commission by the supplier they place you with, hidden inside your unit rate. That shapes their advice. Our model removes the conflict.</p>
+  </div>
+  <div class="contrast__grid">
+    <div class="contrast__col">
+      <p class="eyebrow eyebrow--muted">A typical broker</p>
+      <p>Paid by the supplier, usually as an uplift on your unit rate</p>
+      <p>Earns more when you sign a longer, bigger contract</p>
+      <p>Letter of authority often lets them switch you</p>
+      <p>Interest ends the day the contract is signed</p>
+    </div>
+    <div class="contrast__col contrast__col--us">
+      <p class="eyebrow">Strata</p>
+      <p>Paid by you, a flat monthly retainer you agree up front</p>
+      <p>Earns the same whether you switch or stay</p>
+      <p>Data-only letter of authority: we can read, not act</p>
+      <p>Checks every bill, every month, for as long as you keep us</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Interactive Scripts -->
-    <script>
-        // Calculator Logic
-        const spendSlider = document.getElementById('spend-slider');
-        const solarSlider = document.getElementById('solar-slider');
+<!-- BILL AUDIT -->
+<section class="section section--white" id="audit" aria-labelledby="audit-h">
+  <div class="wrap split">
+    <div class="split__copy">
+      <p class="eyebrow">Bill audit &amp; overcharge recovery</p>
+      <h2 id="audit-h">Stop the money leaking out of your bill.</h2>
+      <p class="lede">Business electricity bills carry a dozen separate charges beyond the energy itself: network charges, capacity, levies, metering. Errors in any of them go unnoticed for years because nobody checks. We check, line by line, against your actual half-hourly usage.</p>
+      <a class="link-arrow" href="#check">Find out if your bill is worth auditing <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="split__aside feature-list">
+      <div class="feature">
+        <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E5C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="M6 16V9"/><path d="M11 16V4"/><path d="M16 16v-6"/><path d="M21 16v-3"/></svg>
+        <div><strong>Half-hourly data, not estimates</strong><p>We reconcile every charge against your metered consumption, not the supplier's summary.</p></div>
+      </div>
+      <div class="feature">
+        <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E5C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><strong>Twelve months back</strong><p>Where we find an error, we pursue the historical refund as well as fixing the future.</p></div>
+      </div>
+      <div class="feature">
+        <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E5C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 9h8"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>
+        <div><strong>Plain-English monthly report</strong><p>What we checked, what we found, what it's worth, and what we're doing about it.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        function updateCalc() {
-            const spend = parseInt(spendSlider.value);
-            const solar = parseInt(solarSlider.value);
-            // Always format as UK numbers (10,000), whatever the visitor's browser language
-            const gb = (n) => n.toLocaleString('en-GB');
+<!-- SOLAR EXPORT -->
+<section class="section" id="export" aria-labelledby="export-h">
+  <div class="wrap split split--flip">
+    <div class="split__aside card">
+      <p class="eyebrow eyebrow--muted">How the pooling works</p>
+      <div class="steps">
+        <div class="step"><span class="step__n">1</span><p>On your own, a 100 kW rooftop array is too small for a wholesale buyer to bother with, so you get the standard export rate.</p></div>
+        <div class="step"><span class="step__n">2</span><p>We group your export with other sites we look after and put the combined volume to licensed offtakers.</p></div>
+        <div class="step"><span class="step__n">3</span><p>You contract directly with the offtaker at the better rate. We arrange it and keep checking you're paid correctly.</p></div>
+      </div>
+    </div>
+    <div class="split__copy">
+      <p class="eyebrow">Solar export aggregation</p>
+      <h2 id="export-h">Your solar export is worth more than you're being paid for it.</h2>
+      <p class="lede">Standard Smart Export Guarantee rates are set for households. If you're a farm, estate or factory exporting serious volume, you're being paid a retail rate for a wholesale product. We pool export across the sites we look after so it can be sold like the wholesale product it is.</p>
+      <a class="link-arrow" href="#check">Get an export rate assessment <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
 
-            document.getElementById('spend-val').innerText = `£${gb(spend)} / mo`;
-            document.getElementById('solar-val').innerText = `${gb(solar)} kWh`;
+<!-- HOW IT WORKS -->
+<section class="section section--dark" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div style="max-width:720px;display:flex;flex-direction:column;gap:12px">
+      <h2 id="how-h">How it works</h2>
+      <p class="lede">Low commitment first. You'll know whether we're worth it before you pay a penny.</p>
+    </div>
+    <div class="how__grid">
+      <div class="how__step"><span class="n">1</span><strong>Send us one bill</strong><p>Any recent electricity bill. We'll tell you, free, whether an audit is likely to pay for itself.</p></div>
+      <div class="how__step"><span class="n">2</span><strong>Sign a data-only LOA</strong><p>A letter of authority that lets us request your billing and meter data, and nothing else.</p></div>
+      <div class="how__step"><span class="n">3</span><strong>We audit and recover</strong><p>Line-by-line check against your half-hourly data. Where there's an error, we raise it with the supplier and chase the refund.</p></div>
+      <div class="how__step"><span class="n">4</span><strong>Monthly, for as long as you like</strong><p>Every new bill checked. Export rates reviewed. A short report each month. Cancel any time.</p></div>
+    </div>
+  </div>
+</section>
 
-            const annualAuditRec = Math.round(spend * 12 * 0.015);
-            const ppaUplift = Math.round(solar * 0.065);
-            const totalValue = annualAuditRec + ppaUplift;
+<!-- SECTORS -->
+<section class="section" id="sectors" aria-labelledby="sectors-h">
+  <div class="wrap">
+    <div style="max-width:720px;display:flex;flex-direction:column;gap:12px">
+      <h2 id="sectors-h">Built for sites with real load and real export</h2>
+      <p class="lede">The bigger and more complex the site, the more there is to find.</p>
+    </div>
+    <div class="sectors__grid">
+      <div class="card sector">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1E5C45" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
+        <h3>Farms &amp; rural estates</h3>
+        <p>Big rooftop solar stuck on household export rates. Borehole pumps and cold stores running when they shouldn't. Seasonal loads on tariffs designed for factories.</p>
+        <div class="sector__tags"><span>Export rate uplift</span><span>Pump &amp; leak anomaly alerts</span><span>Seasonal tariff fit</span></div>
+      </div>
+      <div class="card sector">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1E5C45" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/><path d="M16 9h3a1 1 0 0 1 1 1v11"/><path d="M8 7h4"/><path d="M8 11h4"/><path d="M8 15h4"/><path d="M2 21h20"/></svg>
+        <h3>Commercial property</h3>
+        <p>Tenant recharge disputes. Communal areas billed to the wrong party. Empty units still paying standing charges nobody noticed.</p>
+        <div class="sector__tags"><span>Sub-meter recharge sheets</span><span>Communal cost allocation</span><span>Void period protection</span></div>
+      </div>
+      <div class="card sector">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1E5C45" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20"/><path d="M4 20V10l5 3V10l5 3V10l5 3v7"/><path d="M6 6V4"/><path d="M6 4h3"/></svg>
+        <h3>Manufacturing &amp; industry</h3>
+        <p>Capacity charges set years ago for a load you no longer draw. Climate Change Levy exemptions never claimed. Network charges that don't match your metered profile.</p>
+        <div class="sector__tags"><span>kVA capacity review</span><span>CCL exemption checks</span><span>DUoS &amp; TNUoS line audits</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            let tier = "Core (£150/mo)";
-            if (spend > 5000 && spend <= 20000) tier = "Premier (£250/mo)";
-            if (spend > 20000) tier = "Enterprise (£500+/mo)";
+<!-- ABOUT / TRUST -->
+<section class="section section--white" id="about" aria-labelledby="about-h">
+  <div class="wrap split">
+    <div class="split__copy">
+      <p class="eyebrow">Who you're dealing with</p>
+      <h2 id="about-h">A small, independent firm. You'll always speak to the person doing the work.</h2>
+      <div class="founder">
+        <!-- Replace the div below with: <img class="founder__photo" src="founder.jpg" alt="[Founder name]"> -->
+        <div class="founder__photo" aria-hidden="true">[Founder photo]</div>
+        <div>
+          <strong>[Founder name], founder</strong>
+          <p class="lede" style="font-size:17px">[Two or three sentences in your own words: your background in the energy sector, and why you set Strata up to be paid by customers rather than suppliers.]</p>
+        </div>
+      </div>
+    </div>
+    <div class="split__aside loa">
+      <p class="eyebrow eyebrow--muted">What our data-only LOA allows</p>
+      <div class="check-row"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E5C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><p>Request copies of your bills and half-hourly meter data from your supplier</p></div>
+      <div class="check-row"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E5C45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><p>Raise billing queries and disputes with your supplier on your behalf</p></div>
+      <div class="check-row"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B4443A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg><p>It does <strong>not</strong> let us switch your supplier, sign a contract, or change your tariff</p></div>
+      <div class="check-row"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B4443A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg><p>It does <strong>not</strong> let us receive commission from anyone but you</p></div>
+      <div class="badges">
+        <span class="badge">[Energy Ombudsman TPI scheme badge]</span>
+        <span class="badge">[ICO registration no.]</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-            document.getElementById('audit-rec').innerText = `£${gb(annualAuditRec)}`;
-            document.getElementById('ppa-rec').innerText = `£${gb(ppaUplift)}`;
-            document.getElementById('total-value').innerText = `£${gb(totalValue)} / yr`;
-            document.getElementById('tier-rec').innerText = tier;
-        }
+<!-- WORKED EXAMPLE -->
+<section class="section" aria-labelledby="example-h">
+  <div class="wrap split">
+    <div class="split__copy">
+      <p class="eyebrow">A worked example</p>
+      <h2 id="example-h">What this looks like on a real site</h2>
+      <p class="lede">One anonymised client, real figures. Every site is different, which is why we start with one bill rather than a promise.</p>
+    </div>
+    <div class="split__aside card" style="display:flex;flex-direction:column;gap:20px">
+      <p style="font-size:19px;font-weight:700">[Site type, region, e.g. dairy estate, Shropshire]</p>
+      <div class="example__stats">
+        <div class="stat"><span>Annual export</span><b>[000] MWh</b></div>
+        <div class="stat"><span>Export rate before → after</span><b>[0.0]p → [0.0]p</b></div>
+        <div class="stat"><span>Overcharge recovered</span><b>£[0,000]</b></div>
+      </div>
+      <p class="example__note">[One line on what was found, e.g. capacity charge set against a kVA the site hadn't drawn in four years.] Figures from [month year]; retainer at the time £[000]/month.</p>
+    </div>
+  </div>
+</section>
 
-        spendSlider.addEventListener('input', updateCalc);
-        solarSlider.addEventListener('input', updateCalc);
-        updateCalc();
+<!-- FAQ -->
+<section class="wrap faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Questions we get asked</h2>
+  <div class="faq__list">
+    <details open><summary>How is this different from an energy broker?</summary><p>A broker is paid by the supplier when you sign a contract. We're paid by you, on a flat fee, and our letter of authority can't be used to switch you. We have no stake in which supplier you use.</p></details>
+    <details><summary>What does it cost?</summary><p>A flat monthly retainer from £[000], set by the number and complexity of your meters and agreed before we start. On historical refunds we recover, we charge a [00]% success fee. Nothing else.</p></details>
+    <details><summary>What if you don't find anything?</summary><p>We tell you. The free first-bill check exists so that you don't pay a retainer on a site where there's nothing to find.</p></details>
+    <details><summary>Do I have to change supplier to use the export service?</summary><p>No. Your import supply stays exactly where it is. The export contract is separate, and you sign it directly with the offtaker, not with us.</p></details>
+    <details><summary>Who sees my data?</summary><p>Only us. We hold your meter and billing data under UK GDPR, use it solely for your audit and reporting, and delete it when you leave. Our <a href="privacy.html">privacy policy</a> sets out the detail.</p></details>
+  </div>
+</section>
 
-        // The Python backend on Render (main.py) handles both the chat and the LOA form
-        const API_BASE = 'https://strata-bot-api.onrender.com';
+<!-- CTA / FORM -->
+<section class="wrap" id="check" aria-labelledby="check-h">
+  <div class="cta">
+    <div>
+      <h2 id="check-h">Send us one bill. We'll tell you if it's worth a look.</h2>
+      <p>No letter of authority, no commitment. Tell us who you are and we'll reply within two working days with where to send it.</p>
+    </div>
+    <form class="form" id="check-form" onsubmit="submitCheckForm(event)" novalidate>
+      <label for="company">Company name</label>
+      <input id="company" name="company" type="text" autocomplete="organization" required>
+      <label for="email">Work email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+      <label class="hp" for="website" aria-hidden="true">Leave this empty</label>
+      <input class="hp" id="website" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p id="check-error" role="alert" class="form__error" hidden></p>
+      <button class="btn" type="submit" id="check-submit">Send for a free check</button>
+      <small>We'll reply with a secure address to send your bill to. We use your details only to reply to this request. See our <a href="privacy.html" style="color:#fff">privacy policy</a>.</small>
+    </form>
+    <div class="form__success" id="check-success" role="status" hidden>
+      <strong>Request received.</strong>
+      <p>Thank you. We'll email you within two working days with where to send your bill.</p>
+    </div>
+  </div>
+</section>
 
-        // LOA Modal
-        let loaOpener = null; // the button that opened the form, so focus can return to it
+</main>
 
-        function openLoaModal(opener) {
-            loaOpener = opener || document.activeElement;
-            // Show the form again if it was already sent once
-            document.getElementById('loa-form').classList.remove('hidden');
-            document.getElementById('loa-success').classList.add('hidden');
-            document.getElementById('loa-error').classList.add('hidden');
-            document.getElementById('loa-modal').classList.remove('hidden');
-            document.getElementById('loa-company').focus();
-        }
+<footer class="wrap footer">
+  <div class="footer__brand">
+    <b>Strata Utilities</b>
+    <span>Strata Utilities Ltd · Company no. [00000000] · Registered in England &amp; Wales</span>
+    <span>[Registered office address] · ICO registration [ZA000000]</span>
+  </div>
+  <div class="footer__links">
+    <a href="privacy.html">Privacy policy</a>
+    <a href="complaints.html">Complaints</a>
+    <a href="mailto:john@stratautilities.co.uk">john@stratautilities.co.uk</a>
+  </div>
+</footer>
 
-        async function submitLoaForm(e) {
-            e.preventDefault();
-            const form = document.getElementById('loa-form');
-            const submit = document.getElementById('loa-submit');
-            const errorBox = document.getElementById('loa-error');
-            const showError = (text) => {
-                errorBox.textContent = text;
-                errorBox.classList.remove('hidden');
-            };
+<script>
+  // The Python backend on Render (main.py) receives the form. Same payload as the old LOA form.
+  const API_BASE = 'https://strata-bot-api.onrender.com';
 
-            errorBox.classList.add('hidden');
-            submit.disabled = true;
-            submit.textContent = 'Sending…';
+  async function submitCheckForm(e) {
+    e.preventDefault();
+    const form = document.getElementById('check-form');
+    const submit = document.getElementById('check-submit');
+    const errorBox = document.getElementById('check-error');
+    const showError = (text) => { errorBox.textContent = text; errorBox.hidden = false; };
+    if (!form.reportValidity()) return;
 
-            try {
-                const response = await fetch(`${API_BASE}/api/loa`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        company: document.getElementById('loa-company').value.trim(),
-                        email: document.getElementById('loa-email').value.trim(),
-                        website: document.getElementById('loa-website').value,
-                    })
-                });
+    errorBox.hidden = true;
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
 
-                if (response.ok) {
-                    form.reset();
-                    form.classList.add('hidden');
-                    document.getElementById('loa-success').classList.remove('hidden');
-                    if (window.umami) umami.track('LOA request');
-                } else if (response.status === 400) {
-                    showError('Please check your company name and email address, then try again.');
-                } else if (response.status === 429) {
-                    showError("You've sent a few requests already. Please wait a few minutes, or email us at john@stratautilities.co.uk.");
-                } else {
-                    throw new Error('Server error ' + response.status);
-                }
-            } catch (error) {
-                showError("Sorry, we couldn't send your request just now. Please try again, or email us at john@stratautilities.co.uk.");
-            } finally {
-                submit.disabled = false;
-                submit.textContent = 'Request Data-Only LOA Link';
-            }
-        }
-
-        function closeLoaModal() {
-            document.getElementById('loa-modal').classList.add('hidden');
-            if (loaOpener) loaOpener.focus();
-        }
-
-        // Escape closes whichever pop-up is open
-        document.addEventListener('keydown', (e) => {
-            if (e.key !== 'Escape') return;
-            if (!document.getElementById('loa-modal').classList.contains('hidden')) {
-                closeLoaModal();
-            } else if (!document.getElementById('chat-window').classList.contains('hidden')) {
-                toggleChat();
-            }
-        });
-
-        // Chatbot Integration Logic
-        function toggleChat() {
-            const chatWindow = document.getElementById('chat-window');
-            const toggle = document.getElementById('chat-toggle');
-            const isOpen = !chatWindow.classList.toggle('hidden');
-            toggle.setAttribute('aria-expanded', String(isOpen));
-            toggle.setAttribute('aria-label', isOpen ? 'Close chat' : 'Open chat with the Strata Audit Assistant');
-            if (isOpen) {
-                document.getElementById('chat-input').focus();
-            } else {
-                toggle.focus();
-            }
-        }
-
-        function handleKeyPress(e) {
-            // isComposing: don't send halfway through typing accented/IME characters
-            if (e.key === 'Enter' && !e.isComposing) handleSend();
-        }
-
-        // Conversation memory: Claude has no memory of its own, so the browser keeps
-        // the transcript and sends it with every message. Forgotten when the tab closes.
-        const MAX_TURNS = 10; // must match MAX_TURNS in main.py
-        let chatHistory = []; // [{ role: "user" | "assistant", content: "..." }]
-        // Random ID for this visit, so the server logs can group one conversation
-        // together. It isn't stored in the browser or linked to the visitor.
-        const chatSessionId = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Math.random()).slice(2);
-
-        // Messages are added with textContent (never innerHTML) so anything a visitor
-        // types is shown as plain text and can't run as code on the page.
-        function addUserMessage(text) {
-            const row = document.createElement('div');
-            row.className = 'flex justify-end';
-            const bubble = document.createElement('div');
-            bubble.className = 'bg-steelSlate text-white p-3 rounded-xl max-w-[85%]';
-            bubble.textContent = text;
-            row.appendChild(bubble);
-            document.getElementById('chat-messages').appendChild(row);
-        }
-
-        function addBotMessage(text) {
-            const bubble = document.createElement('div');
-            bubble.className = 'bg-white p-3 rounded-xl border border-slate-200 shadow-sm max-w-[85%] text-slate-700 whitespace-pre-line';
-            bubble.textContent = text;
-            document.getElementById('chat-messages').appendChild(bubble);
-            return bubble;
-        }
-
-        let isSending = false;
-
-        function askSuggestion(button) {
-            document.getElementById('chat-input').value = button.textContent;
-            handleSend();
-        }
-
-        async function handleSend() {
-            // One message at a time, so replies can't arrive out of order
-            if (isSending) return;
-
-            const inputField = document.getElementById('chat-input');
-            const userText = inputField.value.trim();
-            if (!userText) return;
-
-            inputField.value = '';
-            const msgContainer = document.getElementById('chat-messages');
-            const sendButton = document.getElementById('chat-send');
-
-            // Suggested questions are only for getting started
-            const suggestions = document.getElementById('chat-suggestions');
-            if (suggestions) suggestions.remove();
-
-            // Show User Message
-            addUserMessage(userText);
-
-            // "Typing" indicator while waiting. The server can take a while to wake up
-            // after a quiet spell, so the wording changes if it's slow.
-            isSending = true;
-            sendButton.disabled = true;
-            const typing = addBotMessage('Typing…');
-            typing.classList.add('text-slate-400', 'italic');
-            const slowTimer = setTimeout(() => {
-                typing.textContent = 'Just a moment, connecting to the assistant…';
-            }, 5000);
-            msgContainer.scrollTop = msgContainer.scrollHeight;
-
-            try {
-                // Connected to Python Backend
-                const response = await fetch(`${API_BASE}/api/chat`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: userText, history: chatHistory, session_id: chatSessionId })
-                });
-
-                if (!response.ok) throw new Error("Backend offline");
-
-                const data = await response.json();
-
-                clearTimeout(slowTimer);
-                typing.remove();
-                addBotMessage(data.response);
-
-                // Only remember the exchange once we have a real reply
-                chatHistory.push({ role: 'user', content: userText });
-                chatHistory.push({ role: 'assistant', content: data.response });
-                chatHistory = chatHistory.slice(-MAX_TURNS * 2);
-
-                if (data.action === "OPEN_LOA_MODAL") {
-                    openLoaModal(inputField);
-                }
-            } catch (error) {
-                // Graceful fallback
-                clearTimeout(slowTimer);
-                typing.remove();
-                addBotMessage('I am currently undergoing routine maintenance. Please click the "Request a Data-Only LOA" button on the page to submit your enquiry directly.');
-            } finally {
-                isSending = false;
-                sendButton.disabled = false;
-                msgContainer.scrollTop = msgContainer.scrollHeight;
-            }
-        }
-    </script>
+    try {
+      const response = await fetch(`${API_BASE}/api/loa`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          company: document.getElementById('company').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          website: document.getElementById('website').value,
+        })
+      });
+      if (response.ok) {
+        form.reset();
+        form.hidden = true;
+        document.getElementById('check-success').hidden = false;
+        if (window.umami) umami.track('Free check request');
+      } else if (response.status === 400) {
+        showError('Please check your company name and email address, then try again.');
+      } else if (response.status === 429) {
+        showError("You've sent a few requests already. Please wait a few minutes, or email john@stratautilities.co.uk.");
+      } else {
+        throw new Error('Server error ' + response.status);
+      }
+    } catch (err) {
+      showError("Sorry, that didn't send. Please email john@stratautilities.co.uk and we'll pick it up from there.");
+    } finally {
+      submit.disabled = false;
+      submit.textContent = 'Send for a free check';
+    }
+  }
+</script>
 </body>
 </html>
