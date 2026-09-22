@@ -308,6 +308,30 @@
             if (e.key === 'Enter') handleSend();
         }
 
+        // Conversation memory: Claude has no memory of its own, so the browser keeps
+        // the transcript and sends it with every message. Forgotten when the tab closes.
+        const MAX_TURNS = 10; // must match MAX_TURNS in main.py
+        let chatHistory = []; // [{ role: "user" | "assistant", content: "..." }]
+
+        // Messages are added with textContent (never innerHTML) so anything a visitor
+        // types is shown as plain text and can't run as code on the page.
+        function addUserMessage(text) {
+            const row = document.createElement('div');
+            row.className = 'flex justify-end';
+            const bubble = document.createElement('div');
+            bubble.className = 'bg-steelSlate text-white p-3 rounded-xl max-w-[85%]';
+            bubble.textContent = text;
+            row.appendChild(bubble);
+            document.getElementById('chat-messages').appendChild(row);
+        }
+
+        function addBotMessage(text) {
+            const bubble = document.createElement('div');
+            bubble.className = 'bg-white p-3 rounded-xl border border-slate-200 shadow-sm max-w-[85%] text-slate-700';
+            bubble.textContent = text;
+            document.getElementById('chat-messages').appendChild(bubble);
+        }
+
         async function handleSend() {
             const inputField = document.getElementById('chat-input');
             const userText = inputField.value.trim();
@@ -315,12 +339,9 @@
 
             inputField.value = '';
             const msgContainer = document.getElementById('chat-messages');
-            
+
             // Show User Message
-            msgContainer.innerHTML += `
-                <div class="flex justify-end">
-                    <div class="bg-steelSlate text-white p-3 rounded-xl max-w-[85%]">${userText}</div>
-                </div>`;
+            addUserMessage(userText);
             msgContainer.scrollTop = msgContainer.scrollHeight;
 
             try {
@@ -328,28 +349,27 @@
                 const response = await fetch('https://strata-bot-api.onrender.com/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: userText })
+                    body: JSON.stringify({ message: userText, history: chatHistory })
                 });
-                
+
                 if (!response.ok) throw new Error("Backend offline");
-                
+
                 const data = await response.json();
 
-                msgContainer.innerHTML += `
-                    <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm max-w-[85%] text-slate-700">
-                        ${data.response}
-                    </div>`;
-                
+                addBotMessage(data.response);
+
+                // Only remember the exchange once we have a real reply
+                chatHistory.push({ role: 'user', content: userText });
+                chatHistory.push({ role: 'assistant', content: data.response });
+                chatHistory = chatHistory.slice(-MAX_TURNS * 2);
+
                 if (data.action === "OPEN_LOA_MODAL") {
                     document.getElementById('loa-modal').classList.remove('hidden');
                 }
             } catch (error) {
                 // Graceful fallback
                 setTimeout(() => {
-                    msgContainer.innerHTML += `
-                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm max-w-[85%] text-slate-700">
-                            I am currently undergoing routine maintenance. Please click the "Request a Data-Only LOA" button on the page to submit your inquiry directly.
-                        </div>`;
+                    addBotMessage('I am currently undergoing routine maintenance. Please click the "Request a Data-Only LOA" button on the page to submit your inquiry directly.');
                     msgContainer.scrollTop = msgContainer.scrollHeight;
                 }, 500);
             }
