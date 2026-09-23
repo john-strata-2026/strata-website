@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Strata Utilities | Coming soon</title>
+<meta name="description" content="Something is changing in how British business pays for power. Strata Utilities, coming soon.">
+<meta property="og:title" content="Strata Utilities | The energy revolution is coming">
+<meta property="og:description" content="Something is changing in how British business pays for power.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stratautilities.co.uk/">
+<meta property="og:locale" content="en_GB">
+<meta name="theme-color" content="#060B0A">
+<link rel="canonical" href="https://stratautilities.co.uk/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="6cf53810-67fc-4087-b2c0-9109fc7898da"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#060B0A; --ink:#EEF3F0; --ink-2:#9FB1A8; --ink-3:#62756C;
+    --emerald:#34D399; --emerald-2:#059669; --amber:#F59E0B; --line:rgba(159,177,168,.18);
+    --serif:"Fraunces",Georgia,serif; --sans:"Source Sans 3",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0}
+  html,body{height:100%}
+  body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  canvas{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
+  .veil{position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(ellipse 70% 60% at 50% 45%,rgba(6,11,10,.82) 0%,rgba(6,11,10,.35) 55%,rgba(6,11,10,0) 100%)}
+  .grain{position:fixed;inset:-50%;z-index:2;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .page{position:relative;z-index:3;min-height:100%;display:grid;grid-template-rows:auto 1fr auto;padding:max(24px,env(safe-area-inset-top)) clamp(16px,5vw,56px) max(20px,env(safe-area-inset-bottom))}
+  header{display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink)}
+  .brand img{width:26px;height:26px}
+  .status{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:8px}
+  .status i{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber);animation:pulse 2.4s ease-in-out infinite}
+  @keyframes pulse{50%{opacity:.25}}
+  main{display:grid;place-items:center;text-align:center;padding:56px 0}
+  .inner{max-width:880px;display:grid;justify-items:center;gap:28px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--emerald)}
+  h1{font-family:var(--serif);font-weight:300;font-size:clamp(44px,9vw,112px);line-height:.98;letter-spacing:-.025em;text-wrap:balance}
+  h1 em{font-style:italic;font-weight:400;background:linear-gradient(100deg,var(--emerald) 10%,#A7F3D0 45%,var(--amber) 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-size:clamp(17px,2.1vw,21px);color:var(--ink-2);max-width:34ch;text-wrap:balance}
+  .reveal{opacity:0;transform:translateY(14px);animation:rise 1.2s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.2s}.d2{animation-delay:.55s}.d3{animation-delay:.95s}.d4{animation-delay:1.35s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .ticker{font-family:var(--mono);font-size:13px;color:var(--ink-3);min-height:1.6em;letter-spacing:.04em}
+  .ticker b{color:var(--ink);font-weight:500}
+  .contact{display:inline-flex;align-items:center;gap:12px;padding:14px 22px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600;background:rgba(6,11,10,.55);backdrop-filter:blur(8px);transition:border-color .25s,box-shadow .25s,transform .25s}
+  .contact:hover,.contact:focus-visible{border-color:var(--emerald);box-shadow:0 0 0 4px rgba(52,211,153,.12),0 0 40px rgba(52,211,153,.18);transform:translateY(-1px);outline:none}
+  .contact span{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
+  .contact .arrow{color:var(--emerald);transition:transform .25s}
+  .contact:hover .arrow{transform:translateX(3px)}
+  footer{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;font-size:13px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:16px}
+  footer a{color:var(--ink-2);text-decoration:none}
+  footer a:hover{color:var(--ink)}
+  footer nav{display:flex;gap:18px}
+  @media (max-width:560px){.status{display:none}.contact{flex-direction:column;gap:4px;border-radius:18px}.contact .arrow{display:none}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="field" aria-hidden="true"></canvas>
+<div class="veil"></div>
+<div class="grain"></div>
+
+<div class="page">
+  <header>
+    <div class="brand"><img src="favicon.svg" alt="">Strata</div>
+    <div class="status"><i></i>Signal detected</div>
+  </header>
+
+  <main>
+    <div class="inner">
+      <p class="eyebrow reveal d1">Coming soon</p>
+      <h1 class="reveal d2">The energy <em>revolution</em> is coming.</h1>
+      <p class="lede reveal d3">Something is changing in how British business pays for power. Every half-hour, accounted for.</p>
+      <p class="ticker reveal d3" id="ticker" aria-live="off">&nbsp;</p>
+      <a class="contact reveal d4" href="mailto:john@stratautilities.co.uk?subject=Strata%20Utilities%20enquiry">
+        <span>Enquiries</span>john@stratautilities.co.uk<b class="arrow" aria-hidden="true">→</b>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <div>© <span id="yr">2026</span> Strata Utilities Ltd</div>
+    <nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="complaints.html">Complaints</a></nav>
+  </footer>
+</div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* Ticker: cryptic half-hour counter */
+(function(){
+  const el = document.getElementById('ticker');
+  const lines = [
+    () => { const d=new Date(); const p=d.getHours()*2+(d.getMinutes()>=30?1:0)+1; return `Settlement period <b>${String(p).padStart(2,'0')}</b> of 48`; },
+    () => `<b>17,520</b> half-hours a year. Most go unchecked.`,
+    () => `Your meter already knows. <b>Soon, so will you.</b>`
+  ];
+  let i = 0;
+  const show = () => { el.innerHTML = lines[i % lines.length](); i++; };
+  show(); setInterval(show, 4200);
+})();
+
+/* Field: layered half-hourly energy waveforms (strata) with drifting sparks */
+(function(){
+  const c = document.getElementById('field'), x = c.getContext('2d');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W, H, dpr, layers = [], sparks = [];
+  function size(){
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    W = c.width = innerWidth * dpr; H = c.height = innerHeight * dpr;
+    const n = innerWidth < 600 ? 9 : 14;
+    layers = Array.from({length:n}, (_, k) => ({
+      y: H * (0.12 + 0.78 * k / (n - 1)),
+      amp: H * (0.018 + Math.random() * 0.03),
+      speed: 0.00012 + Math.random() * 0.00022,
+      phase: Math.random() * 1000,
+      hue: k / (n - 1)
+    }));
+    sparks = Array.from({length: innerWidth < 600 ? 24 : 48}, newSpark);
+  }
+  function newSpark(){ return { l: Math.floor(Math.random() * layers.length), t: Math.random(), v: 0.0005 + Math.random() * 0.0012 }; }
+  /* a day-shaped load profile: overnight base, morning ramp, midday dip (solar), evening peak */
+  function profile(u){
+    const h = u * 24;
+    return 0.35 + 0.35*Math.exp(-((h-7.5)**2)/4) + 0.45*Math.exp(-((h-17.5)**2)/5) - 0.25*Math.exp(-((h-13)**2)/6);
+  }
+  function colour(a, h){
+    const r = Math.round(52 + (245-52)*h*h), g = Math.round(211 + (158-211)*h*h), b = Math.round(153 + (11-153)*h*h);
+    return `rgba(${r},${g},${b},${a})`;
+  }
+  function yAt(L, u, t){
+    const s = 48, idx = Math.floor(u * s) / s;          // stepped like half-hourly data
+    const p = profile((idx + t * L.speed * 60) % 1);
+    return L.y - p * L.amp * 2.2 + Math.sin(u * 9 + L.phase + t * L.speed * 4) * L.amp * 0.25;
+  }
+  function frame(ts){
+    const t = ts || 0;
+    x.clearRect(0, 0, W, H);
+    for (const L of layers){
+      x.beginPath();
+      for (let i = 0; i <= 96; i++){ const u = i / 96, px = u * W, py = yAt(L, u, t); i ? x.lineTo(px, py) : x.moveTo(px, py); }
+      x.strokeStyle = colour(0.22, L.hue); x.lineWidth = 1.1 * dpr; x.stroke();
+      x.lineTo(W, L.y + L.amp); x.lineTo(0, L.y + L.amp); x.closePath();
+      x.fillStyle = colour(0.018, L.hue); x.fill();
+    }
+    for (const s of sparks){
+      const L = layers[s.l]; if (!L) continue;
+      if (!reduce) s.t += s.v; if (s.t > 1){ Object.assign(s, newSpark(), { t: 0 }); continue; }
+      const px = s.t * W, py = yAt(L, s.t, t), r = 2.2 * dpr;
+      const g = x.createRadialGradient(px, py, 0, px, py, r * 7);
+      g.addColorStop(0, colour(0.9, L.hue)); g.addColorStop(1, colour(0, L.hue));
+      x.fillStyle = g; x.beginPath(); x.arc(px, py, r * 7, 0, Math.PI * 2); x.fill();
+    }
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  addEventListener('resize', () => { size(); if (reduce) frame(0); });
+  size(); reduce ? frame(0) : requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
